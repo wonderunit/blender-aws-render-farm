@@ -33,6 +33,9 @@ Create an Instance Template
 Terminal 
 S3
 
+# Cleaning up
+Make sure your cleanup instance has enough EBS to store the frames and the zip!
+
 # Starting over
 
 # MAKE SURE YOUR INSTANCES ARE STOPPED WHEN YOU ARE DONE!
