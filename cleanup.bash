@@ -46,5 +46,7 @@ BLENDER_FILENAME=`aws s3 ls s3://$AWS_BUCKET | grep -v / | sort | tail -n 1 | aw
 
 mkdir /home/ubuntu/frames
 aws s3 sync s3://$AWS_BUCKET/renders/$BLENDER_FILENAME/frames /home/ubuntu/frames --region $AWS_REGION
-zip -r -0 frames.zip /home/ubuntu/frames
+zip -r -0 /home/ubuntu/frames.zip /home/ubuntu/frames
 aws s3 cp /home/ubuntu/frames.zip s3://$AWS_BUCKET/renders/$BLENDER_FILENAME/ --region $AWS_REGION
+
+sudo shutdown now
