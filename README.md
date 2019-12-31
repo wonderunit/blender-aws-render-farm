@@ -14,6 +14,8 @@ The downside: You have to have to know how AWS works or be willing to figure it 
 
 You create a spot instance fleet that runs a configured script that downloads all the stuff needed to render. It automatically gets the latest .blend file on the S3 bucket and starts rendering it. The rendered frames are automatically saved to S3 so if an instance stops, it doesn't matter, you still have the frames! Also in your blender file, you have to set the render outputs to: [ ] Overwrite AND [X] Use Placeholders. This means that other instances will know when instances are rendering and it will not overwrite other frames. When it's done, the instances will shut themselves down, and you can run the cleanup script to generate a zip file and download it.
 
+There's another project called Brenda https://github.com/gwhobbs/brenda which is a way more complicated but customizable version of this. It appears to be abandoned by the orginal author. I wanted to make something that was super simple at its core: 1 bash script. If something stops working, it's easy to figure out!
+
 # Setting up AWS Account
 
 Create a bucket
