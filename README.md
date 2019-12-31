@@ -1,8 +1,10 @@
 # blender-aws-render-farm
 
-These are simple instructions and a couple scripts to set up a AWS EC2/S3 Blender Render Farm.
+## Simple instructions and a couple scripts to set up a AWS EC2/S3 Blender Render Farm.
 
 The benefits of rendering through AWS is that it is nearly infinitely scalable and the rates are better than any render farm I've seen.
+
+![image](https://user-images.githubusercontent.com/441117/71633838-d425b400-2be4-11ea-935f-03eb607695db.png)
 
 I built this because I needed to render a 400 frames and on my Mac Pro with 24 cores, each frame was taking 14 minutes. That is 93 hours (almost 4 days) of render time!!! When I use my Blender-AWS-Render-Farm, I spin up 96 core instances for roughly $1/hour. Each instance can render a frame in 3.5 minutes. That means one instance can render the frames in 24 hours. So if you spawn up 24 instances, the sequence will be done in 1 hour. 93 times faster for $24. 
 
